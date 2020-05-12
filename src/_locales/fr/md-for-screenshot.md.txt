@@ -3,7 +3,7 @@
 *Markdown Here* est une extension pour Google Chrome, Firefox et Thunderbird qui vous permet d'écrire vos courriels avec Markdown, puis de les convertir avant de les envoyer.
 
 * Markdown est **super**. Mettez du `code dans votre texte`.
-* Ajoutez des liens, comme celui de [ce projet](https://github.com/adam-p/markdown-here).
+* Ajoutez des liens, comme celui de [ce projet](https://github.com/adam-p/markdown-ajuda).
 * Une liste ordonnée, vous dites? **Et** une liste imbriquée?
   1. Fait.
   2. Et fait.
@@ -23,10 +23,10 @@ alert('Bonjour Markdown');
 Et voilà un exemple un peu inhabituel -- un diff :
 
 ```diff
-diff --git a/src/common/markdown-here.js b/src/common/markdown-here.js
+diff --git a/src/common/markdown-ajuda.js b/src/common/markdown-ajuda.js
 index 24dcb97..20c36a1 100644
---- a/src/common/markdown-here.js
-+++ b/src/common/markdown-here.js
+--- a/src/common/markdown-ajuda.js
++++ b/src/common/markdown-ajuda.js
 @@ -201,12 +179,14 @@ function makeStylesExplicit(wrapperElem, css) {
 -        applyStyleToElement(rule.style, selectorMatches[j]);
 +        styleAttr = selectorMatches[j].getAttribute('style') || '';

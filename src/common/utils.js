@@ -121,7 +121,7 @@ function walkDOM(node, func) {
 
 // Next three functions from: http://stackoverflow.com/a/1483487/729729
 // Returns true if `node` is in `range`.
-// NOTE: This function is broken in Postbox: https://github.com/adam-p/markdown-here/issues/179
+// NOTE: This function is broken in Postbox: https://github.com/adam-p/markdown-ajuda/issues/179
 function rangeIntersectsNode(range, node) {
   var nodeRange;
 
@@ -309,7 +309,7 @@ function getLocalURL(url) {
   /*? if (platform==='safari') { */
   if (!matched && typeof(safari) !== 'undefined') {
     matched = true;
-    return safari.extension.baseURI + 'markdown-here/src' + url;
+    return safari.extension.baseURI + 'markdown-ajuda/src' + url;
   }
   /*? } */
   /*? if(platform==='thunderbird'){ */
@@ -425,7 +425,7 @@ function getLocalFileAsBase64(url, callback) {
 
 
 // Events fired by Markdown Here will have this property set to true.
-var MARKDOWN_HERE_EVENT = 'markdown-here-event';
+var MARKDOWN_HERE_EVENT = 'markdown-ajuda-event';
 
 // Fire a mouse event on the given element. (Note: not super robust.)
 function fireMouseClick(elem) {
@@ -453,7 +453,7 @@ function fireMouseClick(elem) {
 }
 
 
-var PRIVILEGED_REQUEST_EVENT_NAME = 'markdown-here-request-event';
+var PRIVILEGED_REQUEST_EVENT_NAME = 'markdown-ajuda-request-event';
 
 function makeRequestToPrivilegedScript(doc, requestObj, callback) {
   // (This if-structure is ugly to work around the preprocessor logic.)
@@ -523,7 +523,7 @@ function makeRequestToPrivilegedScript(doc, requestObj, callback) {
     // See: https://developer.mozilla.org/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages#Chromium-like_messaging.3A_json_request_with_json_callback
 
     // Make a unique event name to use. (Bad style to modify the input like this...)
-    requestObj.responseEventName = 'markdown-here-response-event-' + Math.floor(Math.random()*1000000);
+    requestObj.responseEventName = 'markdown-ajuda-response-event-' + Math.floor(Math.random()*1000000);
 
     var request = doc.createTextNode(JSON.stringify(requestObj));
 

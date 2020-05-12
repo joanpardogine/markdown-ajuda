@@ -31,7 +31,7 @@ hovers over the wrapper. The extra empty div won't have any size, so there
 won't be a hover problem.)
 
 For info about the ideas we had and experiments we ran, see:
-https://github.com/adam-p/markdown-here/issues/85
+https://github.com/adam-p/markdown-ajuda/issues/85
 */
 
 
@@ -63,8 +63,8 @@ function findFocusedElem(document) {
   // Tests if it's possible to access the iframe contentDocument without throwing
   // an exception.
   function iframeAccessOkay(focusedElem) {
-    // Fix #173: https://github.com/adam-p/markdown-here/issues/173
-    // Fix #435: https://github.com/adam-p/markdown-here/issues/435
+    // Fix #173: https://github.com/adam-p/markdown-ajuda/issues/173
+    // Fix #435: https://github.com/adam-p/markdown-ajuda/issues/435
     // If the focus is in an iframe with a different origin, then attempting to
     // access focusedElem.contentDocument will fail with a `SecurityError`:
     // "Failed to read the 'contentDocument' property from 'HTMLIFrameElement': Blocked a frame with origin "http://jsbin.io" from accessing a cross-origin frame."
@@ -96,7 +96,7 @@ function findFocusedElem(document) {
   }
 
   // There's a bug in Firefox/Thunderbird that we need to work around. For
-  // details see https://github.com/adam-p/markdown-here/issues/31
+  // details see https://github.com/adam-p/markdown-ajuda/issues/31
   // The short version: Sometimes we'll get the <html> element instead of <body>.
   if (focusedElem instanceof document.defaultView.HTMLHtmlElement) {
     focusedElem = focusedElem.ownerDocument.body;
@@ -155,7 +155,7 @@ function getOperationalRange(focusedElem) {
     // If the sig is an element node, set a class indicating that it's a sig.
     // This gives us (or the user) the option of styling differently.
     if (sig.nodeType === sig.ELEMENT_NODE) {
-      sig.classList.add('markdown-here-signature');
+      sig.classList.add('markdown-ajuda-signature');
     }
 
     if (range.isPointInRange(sig, 0)) {
@@ -236,7 +236,7 @@ function replaceRange(range, html) {
   // across platforms is good. So we're going to collapse the selection.
   // Note that specifying the `toStart` argument to `true` seems to be necessary
   // in order to actually get a cursor in the editor.
-  // Fixes #427: https://github.com/adam-p/markdown-here/issues/427
+  // Fixes #427: https://github.com/adam-p/markdown-ajuda/issues/427
   range.collapse(true);
 
   return newElement;
@@ -251,7 +251,7 @@ function getMarkdownStylesheet(elem, css) {
 
   // Create a style element
   styleElem = elem.ownerDocument.createElement('style');
-  styleElem.setAttribute('title', 'markdown-here-styles');
+  styleElem.setAttribute('title', 'markdown-ajuda-styles');
 
   // Set the CSS in the style element
   styleElem.appendChild(elem.ownerDocument.createTextNode(css));
@@ -261,7 +261,7 @@ function getMarkdownStylesheet(elem, css) {
 
   // Find the stylesheet that we just created
   for (i = 0; i < elem.ownerDocument.styleSheets.length; i++) {
-    if (elem.ownerDocument.styleSheets[i].title === 'markdown-here-styles') {
+    if (elem.ownerDocument.styleSheets[i].title === 'markdown-ajuda-styles') {
       stylesheet = elem.ownerDocument.styleSheets[i];
       break;
     }
@@ -305,7 +305,7 @@ function makeStylesExplicit(wrapperElem, css) {
       // The check for `elem.classList` stop us if we hit a non-element node
       // while going up through the parents.
       while (elem && (typeof(elem.classList) !== 'undefined')) {
-        if (elem.classList.contains('markdown-here-exclude')) {
+        if (elem.classList.contains('markdown-ajuda-exclude')) {
           elem = 'excluded';
           break;
         }
@@ -375,7 +375,7 @@ function findElemRawHolder(elem) {
   //     | [invisible raw MD holder elem for original email]
   //     [invisible raw MD holder elem for reply]
   // `querySelector` would return the holder inside the original email.
-  // This scenario is issue #297 https://github.com/adam-p/markdown-here/issues/297
+  // This scenario is issue #297 https://github.com/adam-p/markdown-ajuda/issues/297
 
   var rawHolders = elem.querySelectorAll('[title^="' + WRAPPER_TITLE_PREFIX + '"]');
 
@@ -500,7 +500,7 @@ function renderMarkdown(focusedElem, selectedRange, markdownRenderer, renderComp
     // Wrap our pretty HTML in a <div> wrapper.
     // We'll use the wrapper as a marker to indicate that we're in a rendered state.
     mdHtml =
-      '<div class="markdown-here-wrapper" ' +
+      '<div class="markdown-ajuda-wrapper" ' +
            'data-md-url="' + Utils.getTopURL(focusedElem.ownerDocument.defaultView, true) + '">' +
         mdHtml +
         rawHolder +
@@ -522,7 +522,7 @@ function renderMarkdown(focusedElem, selectedRange, markdownRenderer, renderComp
             wrapper.ownerDocument.defaultView.WebKitMutationObserver;
       if (typeof(SupportedMutationObserver) !== 'undefined') {
         var observer = new SupportedMutationObserver(function(mutations) {
-          wrapper.setAttribute('markdown-here-wrapper-content-modified', true);
+          wrapper.setAttribute('markdown-ajuda-wrapper-content-modified', true);
           observer.disconnect();
         });
         observer.observe(wrapper, { childList: true, characterData: true, subtree: true });
@@ -612,7 +612,7 @@ function markdownHere(document, markdownRenderer, logger, renderComplete) {
     var yesToAll = false;
     for (i = 0; i < wrappers.length; i++) {
       // Has the content been modified by the user since rendering
-      if (wrappers[i].getAttribute('markdown-here-wrapper-content-modified') &&
+      if (wrappers[i].getAttribute('markdown-ajuda-wrapper-content-modified') &&
           !yesToAll) {
 
           if (wrappers[i].ownerDocument.defaultView.confirm(Utils.getMessage('unrendering_modified_markdown_warning'))) {

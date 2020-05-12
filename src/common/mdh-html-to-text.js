@@ -66,7 +66,7 @@ Returns an object that looks like this:
   }]
 }
 
-NOTE: Maybe it would be better to do this stuff in markdown-here.js, where
+NOTE: Maybe it would be better to do this stuff in markdown-ajuda.js, where
 we have the DOM available? String-processing the HTML seems suboptimal.
 */
 MdhHtmlToText.prototype._preprocess = function() {
@@ -279,7 +279,7 @@ MdhHtmlToText.prototype.excludeTagBlocks = function(
           this.preprocessInfo.exclusions.push({
             placeholder: placeholder,
             content:
-              '<div class="markdown-here-exclude">' +
+              '<div class="markdown-ajuda-exclude">' +
               (wrapInPara ? '<p>' : '') +
               this.preprocessInfo.html.slice(currentOpenIndex, closeIndex+closeTagLength) +
               (wrapInPara ? '</p>' : '') +

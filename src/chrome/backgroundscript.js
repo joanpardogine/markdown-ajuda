@@ -16,7 +16,7 @@
 function onLoad() {
   // This timeout is a dirty hack to fix bug #119: "Markdown Here Upgrade
   // Notification every time I open Chrome". That issue on Github for details.
-  // https://github.com/adam-p/markdown-here/issues/119
+  // https://github.com/adam-p/markdown-ajuda/issues/119
   window.setTimeout(upgradeCheck, 30000);
 }
 

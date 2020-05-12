@@ -1,6 +1,6 @@
 This extension is used to manipulate the content of email before sending. It can be used in Gmail, Hotmail, or Yahoo webmail interfaces, or in Thunderbird. Make sure you use the rich-edit interface for the email client.
 
-You write email in Markdown (if you're not familiar with Markdown, I made a little reference -- https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet), then right-click, click the "Markdown Toggle" menu item, and the content of the email will be replaced with a rendered-HTML version of the Markdown you had written.
+You write email in Markdown (if you're not familiar with Markdown, I made a little reference -- https://github.com/adam-p/markdown-ajuda/wiki/markdown-ajuda-Cheatsheet), then right-click, click the "Markdown Toggle" menu item, and the content of the email will be replaced with a rendered-HTML version of the Markdown you had written.
 
 If you select a subset of your email and then "Markdown Toggle", only that selection will be rendered/converted.
 
@@ -10,7 +10,7 @@ The Markdown is "Github-flavored". Syntax highlighting is supported. So, for exa
 var i = 0;
 ```
 
-For complete info, see the project page: https://github.com/adam-p/markdown-here
+For complete info, see the project page: https://github.com/adam-p/markdown-ajuda
 
 Please don't hesitate to contact me with questions.
 
@@ -44,7 +44,7 @@ Test #5: The recipient of the email should see it pretty much as it was before y
 Test done.
 
 
-Caveat: Hotmail is a little flaky. Gmail and Thunderbird are the only first-class targets. Details: https://github.com/adam-p/markdown-here#compatibility
+Caveat: Hotmail is a little flaky. Gmail and Thunderbird are the only first-class targets. Details: https://github.com/adam-p/markdown-ajuda#compatibility
 
 
 A few secondary features that can be tested if desired:

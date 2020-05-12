@@ -4,7 +4,7 @@
 
     <Description about="urn:mozilla:install-manifest">
         <em:type>2</em:type> <!-- 2 : Extension -->
-        <em:id>markdown-here@adam.pritchard</em:id>
+        <em:id>markdown-ajuda@adam.pritchard</em:id>
         <em:version>2.13.4</em:version>
 
         <!-- Firefox -->
@@ -150,7 +150,7 @@
         <em:description>Write your email in Markdown, then make it pretty.</em:description>
 
         <em:iconURL>resource://markdown_here_common/images/icon128.png</em:iconURL>
-        <em:homepageURL>https://github.com/adam-p/markdown-here</em:homepageURL>
+        <em:homepageURL>https://github.com/adam-p/markdown-ajuda</em:homepageURL>
 
         <em:optionsType>3</em:optionsType>
         <em:optionsURL>resource://markdown_here_common/options.html</em:optionsURL>

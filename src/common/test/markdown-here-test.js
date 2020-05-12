@@ -65,7 +65,7 @@ describe('markdownHere', function() {
     var doneCaller = function(expectedInnerHtml, done) {
       expectedInnerHtml = expectedInnerHtml.trim();
       return function(elem) {
-        var renderedHTMLRegex = /^<div class="markdown-here-wrapper" data-md-url="[^"]+">([\s\S]*)<div title="MDH:[\s\S]+">[\s\S]*<\/div><\/div>$/;
+        var renderedHTMLRegex = /^<div class="markdown-ajuda-wrapper" data-md-url="[^"]+">([\s\S]*)<div title="MDH:[\s\S]+">[\s\S]*<\/div><\/div>$/;
         var renderedHTML = elem.innerHTML.match(renderedHTMLRegex)[1];
         renderedHTML = renderedHTML.trim();
         expect(renderedHTML).to.equal(expectedInnerHtml);
@@ -94,12 +94,12 @@ describe('markdownHere', function() {
       });
     });
 
-    // Tests fix for https://github.com/adam-p/markdown-here/issues/297
+    // Tests fix for https://github.com/adam-p/markdown-ajuda/issues/297
     // Attempting to unrender an email that was a reply to an email that was
     // itself MDH-rendered failed.
     it('should unrender a reply to a rendered email', function(done) {
       var replyMD = '_bye_';
-      var fullReplyMD = replyMD+'<br><div class="gmail_quote">On Fri, Aug 14, 2015 at 10:34 PM, Billy Bob <span dir="ltr">&lt;<a href="mailto:bb@example.com" target="_blank">bb@example.com</a>&gt;</span> wrote:<br><blockquote><div class="markdown-here-wrapper" data-md-url="xxx"><p><em>hi</em></p>\n<div title="MDH:X2hpXw==" style="height:0;width:0;max-height:0;max-width:0;overflow:hidden;font-size:0em;padding:0;margin:0;">​</div></div></blockquote></div>';
+      var fullReplyMD = replyMD+'<br><div class="gmail_quote">On Fri, Aug 14, 2015 at 10:34 PM, Billy Bob <span dir="ltr">&lt;<a href="mailto:bb@example.com" target="_blank">bb@example.com</a>&gt;</span> wrote:<br><blockquote><div class="markdown-ajuda-wrapper" data-md-url="xxx"><p><em>hi</em></p>\n<div title="MDH:X2hpXw==" style="height:0;width:0;max-height:0;max-width:0;overflow:hidden;font-size:0em;padding:0;margin:0;">​</div></div></blockquote></div>';
       // First render
       renderMD(fullReplyMD, function(elem) {
         // Then unrender

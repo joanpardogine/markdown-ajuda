@@ -321,7 +321,7 @@ var MozillaOptionsStore = {
 
     prefsBranch = Components.classes['@mozilla.org/preferences-service;1']
                             .getService(Components.interfaces.nsIPrefService)
-                            .getBranch('extensions.markdown-here.');
+                            .getBranch('extensions.markdown-ajuda.');
 
     if (data.verb === 'get') {
       prefKeys = prefsBranch.getChildList('');
@@ -331,7 +331,7 @@ var MozillaOptionsStore = {
         // All of our legitimate prefs should be strings, but issue #237 suggests
         // that things may sometimes get into a bad state. We will check and delete
         // and prefs that aren't strings.
-        // https://github.com/adam-p/markdown-here/issues/237
+        // https://github.com/adam-p/markdown-ajuda/issues/237
         if (prefsBranch.getPrefType(prefKeys[i]) !== prefsBranch.PREF_STRING) {
           prefsBranch.clearUserPref(prefKeys[i]);
           continue;
@@ -461,8 +461,8 @@ var SafariOptionsStore = {
 
   // The default values or URLs for our various options.
   defaults: {
-    'main-css': {'__defaultFromFile__': (typeof(safari) !== 'undefined' ? safari.extension.baseURI : '')+'markdown-here/src/common/default.css', '__mimeType__': 'text/css'},
-    'syntax-css': {'__defaultFromFile__': (typeof(safari) !== 'undefined' ? safari.extension.baseURI : '')+'markdown-here/src/common/highlightjs/styles/github.css', '__mimeType__': 'text/css'},
+    'main-css': {'__defaultFromFile__': (typeof(safari) !== 'undefined' ? safari.extension.baseURI : '')+'markdown-ajuda/src/common/default.css', '__mimeType__': 'text/css'},
+    'syntax-css': {'__defaultFromFile__': (typeof(safari) !== 'undefined' ? safari.extension.baseURI : '')+'markdown-ajuda/src/common/highlightjs/styles/github.css', '__mimeType__': 'text/css'},
     'math-enabled': DEFAULTS['math-enabled'],
     'math-value': DEFAULTS['math-value'],
     'hotkey': DEFAULTS['hotkey'],

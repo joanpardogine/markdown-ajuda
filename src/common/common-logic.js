@@ -237,7 +237,7 @@ function setupForgotToRenderInterceptors(composeElem, MdhHtmlToText, marked, pre
   var composeSendButton = findClosestSendButton(composeElem);
 
   if (!composeSendButton) {
-    Utils.consoleLog('Markdown Here was unable to find the Gmail "Send" button. Please let the developers know by creating an issue at: https://github.com/adam-p/markdown-here/issues');
+    Utils.consoleLog('Markdown Here was unable to find the Gmail "Send" button. Please let the developers know by creating an issue at: https://github.com/adam-p/markdown-ajuda/issues');
     return;
   }
 
@@ -482,7 +482,7 @@ function showHTMLForgotToRenderPrompt(html, composeElem, composeSendButton, call
   // Note that `elem` is no longer valid after we call Utils.saferSetOuterHTML on it.
 
   // Set focus to our first button.
-  Utils.setFocus(composeSendButton.ownerDocument.querySelector('#markdown-here-forgot-to-render-buttons button'));
+  Utils.setFocus(composeSendButton.ownerDocument.querySelector('#markdown-ajuda-forgot-to-render-buttons button'));
 
   // We're going to prevent `keyup` firing for a short amount of time to help
   // deal with late `keyup` events resulting from initial Gmail Send activation.
@@ -555,7 +555,7 @@ function showHTMLForgotToRenderPrompt(html, composeElem, composeSendButton, call
   dismissPrompt = function(doc, send) {
     keyboardCapture.remove();
 
-    var forgotToRenderContent = doc.querySelector('#markdown-here-forgot-to-render');
+    var forgotToRenderContent = doc.querySelector('#markdown-ajuda-forgot-to-render');
     if (forgotToRenderContent) {
       doc.body.removeChild(forgotToRenderContent);
     }
@@ -565,19 +565,19 @@ function showHTMLForgotToRenderPrompt(html, composeElem, composeSendButton, call
 
   keyboardCapture.add();
 
-  closeLink = composeSendButton.ownerDocument.querySelector('#markdown-here-forgot-to-render-close');
+  closeLink = composeSendButton.ownerDocument.querySelector('#markdown-ajuda-forgot-to-render-close');
   closeLink.addEventListener('click', function(event) {
     eatEvent(event);
     dismissPrompt(event.target.ownerDocument, false);
   });
 
-  backButton = composeSendButton.ownerDocument.querySelector('#markdown-here-forgot-to-render-button-back');
+  backButton = composeSendButton.ownerDocument.querySelector('#markdown-ajuda-forgot-to-render-button-back');
   backButton.addEventListener('click', function(event) {
     eatEvent(event);
     dismissPrompt(event.target.ownerDocument, false);
   });
 
-  sendButton = composeSendButton.ownerDocument.querySelector('#markdown-here-forgot-to-render-button-send');
+  sendButton = composeSendButton.ownerDocument.querySelector('#markdown-ajuda-forgot-to-render-button-send');
   sendButton.addEventListener('click', function(event) {
     eatEvent(event);
     dismissPrompt(event.target.ownerDocument, true);

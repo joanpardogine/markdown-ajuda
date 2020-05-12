@@ -130,7 +130,7 @@ function prefsAccessRequestHandler(request) {
 
   prefsBranch = Components.classes['@mozilla.org/preferences-service;1']
                              .getService(Components.interfaces.nsIPrefService)
-                             .getBranch('extensions.markdown-here.');
+                             .getBranch('extensions.markdown-ajuda.');
 
   if (request.verb === 'get') {
     prefKeys = prefsBranch.getChildList('');
@@ -140,7 +140,7 @@ function prefsAccessRequestHandler(request) {
       // All of our legitimate prefs should be strings, but issue #237 suggests
       // that things may sometimes get into a bad state. We will check and delete
       // and prefs that aren't strings.
-      // https://github.com/adam-p/markdown-here/issues/237
+      // https://github.com/adam-p/markdown-ajuda/issues/237
       if (prefsBranch.getPrefType(prefKeys[i]) !== prefsBranch.PREF_STRING) {
         prefsBranch.clearUserPref(prefKeys[i]);
         continue;
@@ -188,7 +188,7 @@ function getStringBundleHandler() {
 try {
     // Firefox 4 and later; Mozilla 2 and later
     Components.utils.import("resource://gre/modules/AddonManager.jsm");
-    AddonManager.getAddonByID("markdown-here@adam.pritchard", function(addon) {
+    AddonManager.getAddonByID("markdown-ajuda@adam.pritchard", function(addon) {
         updateHandler(addon.version);
   });
 }
@@ -196,15 +196,15 @@ catch (ex) {
     // Firefox 3.6 and before; Mozilla 1.9.2 and before
     var em = Components.classes["@mozilla.org/extensions/manager;1"]
              .getService(Components.interfaces.nsIExtensionManager);
-    var addon = em.getItemForID("markdown-here@adam.pritchard");
+    var addon = em.getItemForID("markdown-ajuda@adam.pritchard");
     updateHandler(addon.version);
 }
 
 function updateHandler(currVer) {
   var prefService = Components.classes['@mozilla.org/preferences-service;1']
                               .getService(Components.interfaces.nsIPrefService);
-  var prefsBranch = prefService.getBranch('extensions.markdown-here.');
-  var extSyncBranch = prefService.getBranch('services.sync.prefs.sync.extensions.markdown-here.');
+  var prefsBranch = prefService.getBranch('extensions.markdown-ajuda.');
+  var extSyncBranch = prefService.getBranch('services.sync.prefs.sync.extensions.markdown-ajuda.');
 
   var lastVersion = imports.Utils.getMozJsonPref(prefsBranch, 'last-version');
 

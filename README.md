@@ -1,25 +1,25 @@
- cloned from https://github.com/adam-p/markdown-here.wiki.git on 12-may-2020
+ cloned from https://github.com/adam-p/markdown-ajuda.wiki.git on 12-may-2020
 
-# ![Markdown Here logo](https://raw.github.com/adam-p/markdown-here/master/src/common/images/icon48.png) Markdown Here
+# ![Markdown Here logo](https://raw.github.com/adam-p/markdown-ajuda/master/src/common/images/icon48.png) Markdown Here
 
-[**Visit the website.**](http://markdown-here.com)<br>
+[**Visit the website.**](http://markdown-ajuda.com)<br>
 [**Get it for Chrome.**](https://chrome.google.com/webstore/detail/elifhakcjgalahccnjkneoccemfahfoa)<br>
-[**Get it for Firefox.**](https://addons.mozilla.org/en-US/firefox/addon/markdown-here/)<br>
-[**Get it for Safari.**](https://s3.amazonaws.com/markdown-here/markdown-here.safariextz)<br>
-[**Get it for Thunderbird and Postbox.**](https://addons.mozilla.org/en-US/thunderbird/addon/markdown-here/)<br>
-[**Get it for Opera.**](https://addons.opera.com/en/extensions/details/markdown-here/)<br>
-[**Discuss it and ask questions in the Google Group.**](https://groups.google.com/forum/?fromgroups#!forum/markdown-here/)<br>
+[**Get it for Firefox.**](https://addons.mozilla.org/en-US/firefox/addon/markdown-ajuda/)<br>
+[**Get it for Safari.**](https://s3.amazonaws.com/markdown-ajuda/markdown-ajuda.safariextz)<br>
+[**Get it for Thunderbird and Postbox.**](https://addons.mozilla.org/en-US/thunderbird/addon/markdown-ajuda/)<br>
+[**Get it for Opera.**](https://addons.opera.com/en/extensions/details/markdown-ajuda/)<br>
+[**Discuss it and ask questions in the Google Group.**](https://groups.google.com/forum/?fromgroups#!forum/markdown-ajuda/)<br>
 
 *Markdown Here* is a Google Chrome, Firefox, Safari, Opera, and Thunderbird extension that lets you write email<sup>&dagger;</sup> in Markdown<sup>&Dagger;</sup> and render them before sending. It also supports syntax highlighting (just specify the language in a fenced code block).
 
 Writing email with code in it is pretty tedious. Writing Markdown with code in it is easy. I found myself writing email in Markdown in the Github in-browser editor, then copying the preview into email. This is a pretty absurd workflow, so I decided create a tool to write and render Markdown right in the email.
 
-To discover what can be done with Markdown in *Markdown Here*, check out the [Markdown Here Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet) and the other [wiki pages](https://github.com/adam-p/markdown-here/wiki).
+To discover what can be done with Markdown in *Markdown Here*, check out the [Markdown Here Cheatsheet](https://github.com/adam-p/markdown-ajuda/wiki/markdown-ajuda-Cheatsheet) and the other [wiki pages](https://github.com/adam-p/markdown-ajuda/wiki).
 
 <sup>&dagger;: And Google Groups posts, and Blogger posts, and Evernote notes, and Wordpress posts! [See more](#compatibility).</sup><br>
 <sup>&Dagger;: And TeX mathematical formulae!</sup>
 
-![screenshot of conversion](https://raw.github.com/adam-p/markdown-here/master/store-assets/markdown-here-image1.gimp.png)
+![screenshot of conversion](https://raw.github.com/adam-p/markdown-ajuda/master/store-assets/markdown-ajuda-image1.gimp.png)
 
 ### Table of Contents
 **[Installation Instructions](#installation-instructions)**<br>
@@ -53,13 +53,13 @@ After installing, make sure to reload your webmail or restart Chrome!
 
 #### Mozilla Add-ons site
 
-Go to the [Firefox Add-ons page for *Markdown Here*](https://addons.mozilla.org/en-US/firefox/addon/markdown-here/) and install normally.
+Go to the [Firefox Add-ons page for *Markdown Here*](https://addons.mozilla.org/en-US/firefox/addon/markdown-ajuda/) and install normally.
 
 Or go to the "Tools > Add-ons" menu and then search for "Markdown Here".
 
 After installing, make sure to restart Firefox/Thunderbird!
 
-**Note:** It takes up to a month for Mozilla to approve changes to the Firefox/Thunderbird extension, so updates (features, fixes) will lag behind what is shown here. You can manually choose to install the newest version before it's reviewed from the list of versions: [https://addons.mozilla.org/en-US/firefox/addon/markdown-here/versions/](https://addons.mozilla.org/en-US/firefox/addon/markdown-here/versions/)
+**Note:** It takes up to a month for Mozilla to approve changes to the Firefox/Thunderbird extension, so updates (features, fixes) will lag behind what is shown here. You can manually choose to install the newest version before it's reviewed from the list of versions: [https://addons.mozilla.org/en-US/firefox/addon/markdown-ajuda/versions/](https://addons.mozilla.org/en-US/firefox/addon/markdown-ajuda/versions/)
 
 #### Manual/Development
 
@@ -68,7 +68,7 @@ After installing, make sure to restart Firefox/Thunderbird!
 
 ### Safari
 
-[Download the extension directly.](https://s3.amazonaws.com/markdown-here/markdown-here.safariextz) When it has finished downloading, double click it to install.
+[Download the extension directly.](https://s3.amazonaws.com/markdown-ajuda/markdown-ajuda.safariextz) When it has finished downloading, double click it to install.
 
 #### Preferences
 
@@ -78,7 +78,7 @@ To get to the Markdown Here preferences, open the Safari preferences and then go
 
 Note that *Markdown Here* only works with Opera versions 16 and higher (i.e., the ones that are based on Chromium).
 
-Go to the [Opera Add-ons store page for *Markdown Here*](https://addons.opera.com/en/extensions/details/markdown-here/) and install normally.
+Go to the [Opera Add-ons store page for *Markdown Here*](https://addons.opera.com/en/extensions/details/markdown-ajuda/) and install normally.
 
 After installing, make sure to reload your webmail or restart Chrome!
 
@@ -125,7 +125,7 @@ Sometimes you don't want to convert the entire email; sometimes your email isn't
 
 To revert back to Markdown, just put your cursor anywhere in the block of converted text, right click, and click the "Markdown Toggle" menu item again. Now it's magically back to the original Markdown.
 
-![screenshot of selection conversion](https://raw.github.com/adam-p/markdown-here/master/store-assets/markdown-here-image2.gimp.png)
+![screenshot of selection conversion](https://raw.github.com/adam-p/markdown-ajuda/master/store-assets/markdown-ajuda-image2.gimp.png)
 
 #### Things to know about converting/reverting a selection
 
@@ -146,22 +146,22 @@ The *Markdown Here* Options page can be accessed via the Chrome, Firefox, Safari
 
 For Chrome and Firefox, any changes made in the *Markdown Here* Options are automatically synchronized between your other installations of that browser (if you have the sync feature enabled in the browser).
 
-![screenshot of options](https://raw.githubusercontent.com/adam-p/markdown-here/master/store-assets/markdown-here-chrome-options-1.gimp.png)
+![screenshot of options](https://raw.githubusercontent.com/adam-p/markdown-ajuda/master/store-assets/markdown-ajuda-chrome-options-1.gimp.png)
 
 
 ## Troubleshooting
 
-See the [Troubleshooting wiki page](https://github.com/adam-p/markdown-here/wiki/Troubleshooting).
+See the [Troubleshooting wiki page](https://github.com/adam-p/markdown-ajuda/wiki/Troubleshooting).
 
 
 ## Compatibility
 
-See the [Compatibility wiki page](https://github.com/adam-p/markdown-here/wiki/Compatibility).
+See the [Compatibility wiki page](https://github.com/adam-p/markdown-ajuda/wiki/Compatibility).
 
 
 ## Notes and Miscellaneous
 
-* *Markdown Here* uses [Github Flavored Markdown](http://github.github.com/github-flavored-markdown/), with the limitation that GFM special links are not supported ([issue #11](https://github.com/adam-p/markdown-here/issues/11)); nor will they be, as MDH is not Github-specific.
+* *Markdown Here* uses [Github Flavored Markdown](http://github.github.com/github-flavored-markdown/), with the limitation that GFM special links are not supported ([issue #11](https://github.com/adam-p/markdown-ajuda/issues/11)); nor will they be, as MDH is not Github-specific.
 
 * Available languages for syntax highlighting (and the way they should be written in the fenced code block) can be seen on the [highlight.js demo page](http://softwaremaniacs.org/media/soft/highlight/test.html).
 
@@ -176,7 +176,7 @@ See the [Compatibility wiki page](https://github.com/adam-p/markdown-here/wiki/C
   * The use of browser-specific styles (-moz-, -webkit-) should be avoided. If used, they may not render correctly for people reading the email in a different browser from the one where the email was sent.
   * The use of state-dependent styles (like `a:hover`) don't work because they don't match at the time the styles are made explicit. (In email, styles must be explicitly applied to all elements -- stylesheets get stripped.)
 
-* For more tweaky features, visit the [Tips and Tricks](https://github.com/adam-p/markdown-here/wiki/Tips-and-Tricks) section.
+* For more tweaky features, visit the [Tips and Tricks](https://github.com/adam-p/markdown-ajuda/wiki/Tips-and-Tricks) section.
 
 ## Building the Extension Bundles
 
@@ -209,15 +209,15 @@ firefox/
 
 ### Safari extension
 
-The browser-specific code is located in the [`markdown-here-safari`](https://github.com/adam-p/markdown-here-safari) project.
+The browser-specific code is located in the [`markdown-ajuda-safari`](https://github.com/adam-p/markdown-ajuda-safari) project.
 
 Use the Safari Extension Builder.
 
 ## Next Steps
 
-See the [issues list](https://github.com/adam-p/markdown-here/issues) and the [Notes Wiki](https://github.com/adam-p/markdown-here/wiki/Development-Notes). All ideas, bugs, plans, complaints, and dreams will end up in one of those two places.
+See the [issues list](https://github.com/adam-p/markdown-ajuda/issues) and the [Notes Wiki](https://github.com/adam-p/markdown-ajuda/wiki/Development-Notes). All ideas, bugs, plans, complaints, and dreams will end up in one of those two places.
 
-Feel free to create a feature request issue if what you want isn't already there. If you'd prefer a less formal approach to floating an idea, post to the ["markdown-here" Google Group](https://groups.google.com/forum/?fromgroups=#!forum/markdown-here).
+Feel free to create a feature request issue if what you want isn't already there. If you'd prefer a less formal approach to floating an idea, post to the ["markdown-ajuda" Google Group](https://groups.google.com/forum/?fromgroups=#!forum/markdown-ajuda).
 
 It also takes a fair bit of work to stay up-to-date with the latest changes in all the applications and web sites where Markdown Here works.
 
@@ -231,17 +231,17 @@ It also takes a fair bit of work to stay up-to-date with the latest changes in a
 
 ## Feedback
 
-All bugs, feature requests, pull requests, feedback, etc., are welcome. [Create an issue](https://github.com/adam-p/markdown-here/issues). Or [post to the "markdown-here" Google Group](https://groups.google.com/forum/?fromgroups=#!forum/markdown-here).
+All bugs, feature requests, pull requests, feedback, etc., are welcome. [Create an issue](https://github.com/adam-p/markdown-ajuda/issues). Or [post to the "markdown-ajuda" Google Group](https://groups.google.com/forum/?fromgroups=#!forum/markdown-ajuda).
 
 ## License
 
 ### Code
 
-MIT License: http://adampritchard.mit-license.org/ or see [the `LICENSE` file](https://github.com/adam-p/markdown-here/blob/master/LICENSE).
+MIT License: http://adampritchard.mit-license.org/ or see [the `LICENSE` file](https://github.com/adam-p/markdown-ajuda/blob/master/LICENSE).
 
 ### Logo
 
-Copyright 2015, [Austin Anderson](http://protractor.ninja/). Licensed to Markdown Here under the [MDH contributor license agreement](https://github.com/adam-p/markdown-here/blob/master/CLA-individual.md).
+Copyright 2015, [Austin Anderson](http://protractor.ninja/). Licensed to Markdown Here under the [MDH contributor license agreement](https://github.com/adam-p/markdown-ajuda/blob/master/CLA-individual.md).
 
 ### Other images
 
@@ -249,4 +249,4 @@ Copyright 2015, [Austin Anderson](http://protractor.ninja/). Licensed to Markdow
 
 ---
 
-![Dos Equis man says](https://raw.github.com/adam-p/markdown-here/master/store-assets/dos-equis-MDH.jpg)
+![Dos Equis man says](https://raw.github.com/adam-p/markdown-ajuda/master/store-assets/dos-equis-MDH.jpg)

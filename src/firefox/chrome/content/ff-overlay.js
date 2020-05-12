@@ -18,7 +18,7 @@ var markdown_here = {
 
   // Components.utils is somewhat more performant than mozIJSSubScriptLoader,
   // but it doesn't expose the global `window` to the code, which introduces
-  // tons of headaches (see https://github.com/adam-p/markdown-here/issues/141).
+  // tons of headaches (see https://github.com/adam-p/markdown-ajuda/issues/141).
   // The correct way to deal with that is probably to pass `window` into every
   // single call, but that seems onerous.
   // For details on the difference, see:
@@ -111,7 +111,7 @@ var markdown_here = {
     markdown_here.imports.htmlToText = window.htmlToText;
     markdown_here.scriptLoader.loadSubScript('resource://markdown_here_common/marked.js');
     markdown_here.imports.marked = window.marked;
-    markdown_here.scriptLoader.loadSubScript('resource://markdown_here_common/markdown-here.js');
+    markdown_here.scriptLoader.loadSubScript('resource://markdown_here_common/markdown-ajuda.js');
     markdown_here.imports.markdownHere = window.markdownHere;
     markdown_here.scriptLoader.loadSubScript('resource://markdown_here_common/mdh-html-to-text.js');
     markdown_here.imports.MdhHtmlToText = window.MdhHtmlToText;
@@ -391,23 +391,23 @@ var markdown_here = {
   showUpgradeNotification: function(optionsURL, openTabFn) {
     markdown_here.imports.CommonLogic.getUpgradeNotification(optionsURL, function(html) {
       var addUpgradeNotificationToTab = function(tabbrowser) {
-        if (!tabbrowser.contentDocument.querySelector('#markdown-here-upgrade-notification-content')) {
+        if (!tabbrowser.contentDocument.querySelector('#markdown-ajuda-upgrade-notification-content')) {
           var elem = tabbrowser.contentDocument.createElement('div');
           tabbrowser.contentDocument.body.appendChild(elem);
           markdown_here.imports.Utils.saferSetOuterHTML(elem, html);
 
             // Setting the outer HTML wrecks our reference to the element, so get it again.
-          elem = tabbrowser.contentDocument.querySelector('#markdown-here-upgrade-notification-content');
+          elem = tabbrowser.contentDocument.querySelector('#markdown-ajuda-upgrade-notification-content');
 
           // Add click handlers so that we can clear the notification.
-          var optionsLink = tabbrowser.contentDocument.querySelector('#markdown-here-upgrade-notification-link');
+          var optionsLink = tabbrowser.contentDocument.querySelector('#markdown-ajuda-upgrade-notification-link');
           optionsLink.addEventListener('click', function(event) {
             event.preventDefault();
             markdown_here._hideUpgradeNotification();
             openTabFn(optionsURL);
           });
 
-          var closeLink = tabbrowser.contentDocument.querySelector('#markdown-here-upgrade-notification-close');
+          var closeLink = tabbrowser.contentDocument.querySelector('#markdown-ajuda-upgrade-notification-close');
           closeLink.addEventListener('click', function(event) {
             event.preventDefault();
             markdown_here._hideUpgradeNotification();
@@ -436,7 +436,7 @@ var markdown_here = {
 
     function removeNotificationFromTab(tabbrowser) {
       // Check if this tab has the notification and remove it.
-      var notification = tabbrowser.contentDocument.querySelector('#markdown-here-upgrade-notification-content');
+      var notification = tabbrowser.contentDocument.querySelector('#markdown-ajuda-upgrade-notification-content');
       if (notification) {
         tabbrowser.contentDocument.body.removeChild(notification);
       }

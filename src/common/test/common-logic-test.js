@@ -16,7 +16,7 @@ describe('CommonLogic', function() {
 
   describe('getUpgradeNotification', function() {
     it('should get the upgrade notification', function(done) {
-      var KNOWN_CONTENT = 'id="markdown-here-upgrade-notification-content"';
+      var KNOWN_CONTENT = 'id="markdown-ajuda-upgrade-notification-content"';
       var TEST_OPTIONS_URL = 'my-test-options-url';
       var callback = function(data) {
         expect(data.indexOf(KNOWN_CONTENT)).to.be.greaterThan(-1);
@@ -30,7 +30,7 @@ describe('CommonLogic', function() {
 
   describe('getForgotToRenderPromptContent', function() {
     it('should get the forgot-to-render prompt', function(done) {
-      var KNOWN_CONTENT = 'id="markdown-here-forgot-to-render"';
+      var KNOWN_CONTENT = 'id="markdown-ajuda-forgot-to-render"';
       var callback = function(data) {
         expect(data.indexOf(KNOWN_CONTENT)).to.be.greaterThan(-1);
         done();

@@ -298,7 +298,7 @@ function requestMarkdownConversion(elem, range, callback) {
 
 // Render the sample Markdown.
 function renderMarkdown(postRenderCallback) {
-  if (rawMarkdownIframe.contentDocument.querySelector('.markdown-here-wrapper')) {
+  if (rawMarkdownIframe.contentDocument.querySelector('.markdown-ajuda-wrapper')) {
     // Already rendered.
     if (postRenderCallback) postRenderCallback();
     return;
@@ -327,7 +327,7 @@ function renderMarkdown(postRenderCallback) {
 
 // Re-render already-rendered sample Markdown.
 function updateMarkdownRender() {
-  if (!rawMarkdownIframe.contentDocument.querySelector('.markdown-here-wrapper')) {
+  if (!rawMarkdownIframe.contentDocument.querySelector('.markdown-ajuda-wrapper')) {
     // Not currently rendered, so nothing to update.
     return;
   }
