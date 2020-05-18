@@ -1,6 +1,6 @@
 cloned from https://github.com/adam-p/markdown-ajuda.wiki.git on 12-may-2020
  
-visit on [https://github.com/adam-p/markdown-here/wiki](markdown-here/wiki)
+visit on [markdown-here/wiki](https://github.com/adam-p/markdown-here/wiki)
 
 # ![Markdown Here logo](https://raw.github.com/adam-p/markdown-ajuda/master/src/common/images/icon48.png) Markdown Here
 
